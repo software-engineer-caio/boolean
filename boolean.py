@@ -1,5 +1,6 @@
 # Construindo a logica do not
 
+
 var_1 = True
 var_2 = False
 
@@ -35,13 +36,51 @@ var_2_f = False
 
 var_resultado = ((var_1_t and var_2_f) or ((var_1_f or var_2_t) and (not var_2_f)))
 print('O resultado da logica é {}'.format(var_resultado))
+print(' ')
 
 
+
+#forma que eu fiz
 var_a_t = False
 var_b_t = True
 # T T = FALSE
 # T F = TRUE
 # F F = False
 # F T = True
+
 var_s = (not var_a_t and var_b_t) or (not var_b_t and var_a_t)
 print ('O resultado da logica do exercicio é {}'.format(var_s))
+print(' ')
+
+
+#forma que o professor fez
+A = False
+B = False
+
+regra = ((not A) and B) or ((not B) and A)
+print(A,'+',B,'=',regra)
+
+A = False
+B = True
+regra = ((not A) and B) or ((not B) and A)
+print(A,'+',B,'=',regra)
+
+A = True
+B = False
+regra = ((not A) and B) or ((not B) and A)
+print(A,'+',B,'=',regra)
+
+A = True
+B = True
+regra = ((not A) and B) or ((not B) and A)
+print(A,'+',B,'=',regra)   
+print(' ')
+
+A = (input())
+B = (input())
+C = (input())
+D = (input())
+
+regra_2 = (not (A and (not C)) or (B or D)) and ((not D) and C)
+print(A,B,C,D,regra_2)
+
